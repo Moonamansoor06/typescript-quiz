@@ -30,4 +30,4 @@ jobs:
       - name: Installing surge
         run: npm install --global surge
       - name: deploying using surge
-        run: surge ./ type-quiz.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        run: surge ./ mytypescript-quiz.surge.sh --token ${{ secrets.SURGE_TOKEN }}
