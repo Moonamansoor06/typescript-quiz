@@ -4,8 +4,21 @@ import { getQuizDetails } from './services/quiz_service';
 import { Difficulty } from './services/quiz_service';
 import { QuizType } from './Types/quiz_types';
 import QuestionCard from './Components/QuestionCard';
+import firebase from './firebase'
 
 function App() {
+  React.useEffect(() => {
+    const msg: any=firebase.messaging();
+    msg.requestPermission().then(() => {
+        
+        return msg.getToken();}).then((data:string)=>{
+         console.warn("token", data)
+        })
+           
+           .catch((err: any) => {
+               console.log("An error occurred while retrieving token. ", err);
+           })
+          })
 
   let [quiz, setQuiz] = useState<QuizType[]>([])
   let [currentStep, setCurrentStep] = useState(0)
