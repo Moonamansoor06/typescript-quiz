@@ -3,6 +3,7 @@ const urlsToCache = [ '/src/'
 ];
 const self=this;
 
+
 // Install SW
 self.addEventListener('install', (event) => {
     event.waitUntil(
