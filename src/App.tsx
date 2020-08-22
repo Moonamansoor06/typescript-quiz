@@ -4,10 +4,20 @@ import { getQuizDetails } from './services/quiz_service';
 import { Difficulty } from './services/quiz_service';
 import { QuizType } from './Types/quiz_types';
 import QuestionCard from './Components/QuestionCard';
-import firebase from './firebase'
+import { requestFirebaseNotificationPermission } from './firebaseInit'
+
 
 function App() {
-  React.useEffect(() => {
+  requestFirebaseNotificationPermission()
+  .then((firebaseToken) => {
+    // eslint-disable-next-line no-console
+    console.log("token===>",firebaseToken);
+  })
+  .catch((err) => {
+    return err;
+  });
+
+/*   React.useEffect(() => {
     const msg: any=firebase.messaging();
     msg.requestPermission().then(() => {
         
@@ -18,7 +28,7 @@ function App() {
            .catch((err: any) => {
                console.log("An error occurred while retrieving token. ", err);
            })
-          })
+          }) */
 
   let [quiz, setQuiz] = useState<QuizType[]>([])
   let [currentStep, setCurrentStep] = useState(0)
