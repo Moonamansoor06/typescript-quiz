@@ -1,14 +1,13 @@
 importScripts('https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/7.14.2/firebase-messaging.js');
 
-const config ={ apiKey: "AIzaSyCxrQDQtymKVyw2xKsn2T1XE78fRCJj4LE",
-authDomain: "expense-tracker-e1e77.firebaseapp.com",
-databaseURL: "https://expense-tracker-e1e77.firebaseio.com",
-projectId: "expense-tracker-e1e77",
-storageBucket: "expense-tracker-e1e77.appspot.com",
-messagingSenderId: "613575190808",
-appId: "1:613575190808:web:7df0a69c85fd370377166d",
-measurementId: "G-3YX0LK5E8F"};
+const config ={ apiKey: "AIzaSyDLxe8iLiKvjYAFpHS9bAzEU82IopQwA14",
+authDomain: "typescript-quiz.firebaseapp.com",
+databaseURL: "https://typescript-quiz.firebaseio.com",
+projectId: "typescript-quiz",
+storageBucket: "typescript-quiz.appspot.com",
+messagingSenderId: "765137182488",
+appId: "1:765137182488:web:56f58eb2229c2b8801886d"};
 
 
 firebase.initializeApp(config);
